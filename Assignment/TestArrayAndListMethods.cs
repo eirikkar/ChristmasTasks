@@ -10,7 +10,7 @@ public class TestArrayAndListMethods : AssignmentBase
 {
     public string[] StringArray(string[] arr)
     {
-        throw new NotImplementedException();
+        return arr;
     }
 
     public int[] IntSum(int a, int b)
