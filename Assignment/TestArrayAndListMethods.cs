@@ -15,13 +15,15 @@ public class TestArrayAndListMethods : AssignmentBase
 
     public int[] IntSum(int a, int b)
     {
-        throw new NotImplementedException();
+        int[] intArray = new int[a + b];
+        return intArray;
     }
 
     public List<string> LoopList(List<string> element)
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Implement a simple Dictionary method
     /// </summary>
@@ -66,6 +68,7 @@ public class TestArrayAndListMethods : AssignmentBase
         }
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// A method that implements the Fibonacci sequence, starting from n = 1
     /// </summary>
@@ -77,20 +80,20 @@ public class TestArrayAndListMethods : AssignmentBase
         throw new NotImplementedException();
     }
 
-
-
     [Assignment(1)]
     public void ShouldReturnStringArray()
     {
         string[] expected = new string[25];
         Assert.Equal(expected, StringArray(expected));
     }
+
     [Assignment(2)]
     public void ShouldReturnSumOfIntArray()
     {
         int[] sum = new int[3];
         Assert.Equal(sum, IntSum(1, 2));
     }
+
     [Assignment(3)]
     public void ShouldReturnANewElementInList()
     {
@@ -100,17 +103,25 @@ public class TestArrayAndListMethods : AssignmentBase
             Assert.Equal(expected, LoopList(expected));
         }
     }
+
     [Assignment(4)]
     public void ShouldReturnANewDictionary()
     {
-        Dictionary<int, string> expected = new Dictionary<int, string>() {
-            {1,""}, {2,"Hello World!"}, {3, "foo"}, {4, "bar"}, {5, "foo"}, {6, "baz"}
+        Dictionary<int, string> expected = new Dictionary<int, string>()
+        {
+            { 1, "" },
+            { 2, "Hello World!" },
+            { 3, "foo" },
+            { 4, "bar" },
+            { 5, "foo" },
+            { 6, "baz" },
         };
         for (int i = 0; i < 10; i++)
         {
             Assert.Equal(expected, LoopDict(expected));
         }
     }
+
     [Assignment(5)]
     public void TestReverseString()
     {
@@ -125,25 +136,57 @@ public class TestArrayAndListMethods : AssignmentBase
     public void TestBinarySearchMethod()
     {
         int[] expectedXValues = { 1, 2, 3, 4, 5, 6, 8, 9, 10, 25, 99, 91 };
-        int[] samplePool = {
-            1,2,3,4,5,6,7,8,9,10,12,24,32,48,56,64,128,256,512,1024,2048, 1213, 1440, 2414, 93, 01, 23,
+        int[] samplePool =
+        {
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            24,
+            32,
+            48,
+            56,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            1213,
+            1440,
+            2414,
+            93,
+            01,
+            23,
         };
 
         for (int i = 0; i < samplePool.Count(); i++)
         {
             for (int j = 0; j < expectedXValues.Length; j++)
             {
-                Assert.DoesNotContain(BinarySearch(samplePool, expectedXValues[i]), expectedXValues);
+                Assert.DoesNotContain(
+                    BinarySearch(samplePool, expectedXValues[i]),
+                    expectedXValues
+                );
                 Assert.Equal(expectedXValues[j], BinarySearch(samplePool, expectedXValues[j]));
             }
         }
     }
+
     [Assignment(7)]
     public void TestPrimitiveTypeHandling()
     {
         Assert.Throws<OverflowException>(() => IntSum(int.MaxValue, 1));
         Assert.Throws<OverflowException>(() => IntSum(int.MinValue, -1));
     }
+
     [Assignment(8)]
     public void TestObjectEquality()
     {
@@ -151,6 +194,7 @@ public class TestArrayAndListMethods : AssignmentBase
         Person person2 = new Person { Name = "Jane Doe", Age = 30 };
         Assert.Equal(person1, person2);
     }
+
     [Assignment(9)]
     public void TestFibonacci()
     {
