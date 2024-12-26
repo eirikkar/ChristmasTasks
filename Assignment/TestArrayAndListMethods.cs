@@ -37,7 +37,7 @@ public class TestArrayAndListMethods : AssignmentBase
 
     public string ReverseString(string arr)
     {
-        throw new NotImplementedException();
+        return arr;
     }
 
     /*
