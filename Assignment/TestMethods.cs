@@ -15,8 +15,9 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string StringMethod(string str)
     {
-        throw new NotImplementedException();
+        return str;
     }
+
     /// <summary>
     /// Return a new string array
     /// </summary>
@@ -27,6 +28,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return the sum of a + b
     /// </summary>
@@ -38,6 +40,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return the sum of a * b
     /// </summary>
@@ -49,6 +52,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return a list of doubles
     /// </summary>
@@ -58,6 +62,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return a single characther
     /// </summary>
@@ -68,6 +73,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return a boolean that should be true
     /// </summary>
@@ -78,6 +84,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return a boolean that should be false
     /// </summary>
@@ -88,12 +95,14 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
-    /// Can enter if the age is greater than or equal to 18, 
+    /// Can enter if the age is greater than or equal to 18,
     /// if age is greater than or equal to 18, return true, else return false
     /// </summary>
     /// <param name="age"></param>
@@ -102,6 +111,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return a new dictionary with int keys and string values
     /// </summary>
@@ -111,6 +121,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException("");
     }
+
     /// <summary>
     /// Return the square of a (a * a)
     /// </summary>
@@ -121,6 +132,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Return the sum of a / b, make sure that a and b cannot be 0
     /// </summary>
@@ -143,6 +155,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /// <summary>
     /// Append text content to an exisiting file
     /// </summary>
@@ -154,6 +167,7 @@ public class TestMethods : AssignmentBase
     {
         throw new NotImplementedException();
     }
+
     /*
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     *****************     TESTS ********************************
@@ -179,6 +193,7 @@ public class TestMethods : AssignmentBase
         string[] expected = new string[255];
         Assert.Equal(StringArrayMethod(expected), expected);
     }
+
     [Assignment(3)]
     public void TestIntAddMethod()
     {
@@ -189,6 +204,7 @@ public class TestMethods : AssignmentBase
         Assert.Equal(AddIntMethod(20, 5), expected[3]);
         Assert.Equal(AddIntMethod(-4, 2), expected[4]);
     }
+
     [Assignment(4)]
     public void TestMultiplyDoubleMethod()
     {
@@ -199,14 +215,15 @@ public class TestMethods : AssignmentBase
         Assert.Equal(MultiplyDoubleMethod(10, 1), expected[2]);
         Assert.Equal(MultiplyDoubleMethod(5, 5), expected[3]);
         Assert.Equal(MultiplyDoubleMethod(512, 2), expected[4]);
-
     }
+
     [Assignment(5)]
     public void TestIsListOfDoubles()
     {
         Assert.Equal(new List<double>(), ListDoubleMethod());
         Assert.Equivalent(new List<double>(), ListDoubleMethod());
     }
+
     [Assignment(6)]
     public void TestCharMethod()
     {
@@ -216,6 +233,7 @@ public class TestMethods : AssignmentBase
             Assert.Equal(CharMethod(expected[i]), expected[i]);
         }
     }
+
     [Assignment(7)]
     public void TestBooleanMethods()
     {
@@ -226,22 +244,26 @@ public class TestMethods : AssignmentBase
             Assert.Equal(IsNotTrue(expected[i]), expected[i]);
         }
     }
+
     [Assignment(8)]
     public void TestGenericTypes()
     {
         Assert.Equal(new List<Generics>(), GenericTypeMethod(t, e));
     }
+
     [Assignment(9)]
     public void TestCanEnter()
     {
         Assert.True(CanEnter(18));
         Assert.False(CanEnter(10));
     }
+
     [Assignment(10)]
     public void TestDictionary()
     {
         Assert.Equal(new Dictionary<int, string>(), DictionaryMethod());
     }
+
     [Assignment(11)]
     public void TestSquare()
     {
@@ -251,6 +273,7 @@ public class TestMethods : AssignmentBase
             Assert.Equal(expected[i], Square(i));
         }
     }
+
     [Assignment(12)]
     public void TestDivideNumbers()
     {
@@ -259,12 +282,16 @@ public class TestMethods : AssignmentBase
         {
             Assert.Equal(expected[i], DivideNumbers(i, 2));
             Assert.Equal(expected[i], DivideNumbers(expected[i], expected[i]));
-            if (DivideNumbers(expected[i], 0) == double.PositiveInfinity || DivideNumbers(expected[i], 0) == double.NegativeInfinity)
+            if (
+                DivideNumbers(expected[i], 0) == double.PositiveInfinity
+                || DivideNumbers(expected[i], 0) == double.NegativeInfinity
+            )
             {
                 throw new DivideByZeroException();
             }
         }
     }
+
     [Assignment(13)]
     public void TestCreateFile()
     {
@@ -289,6 +316,7 @@ public class TestMethods : AssignmentBase
             }
         }
     }
+
     [Assignment(14)]
     public void TestAppendTextContent()
     {
