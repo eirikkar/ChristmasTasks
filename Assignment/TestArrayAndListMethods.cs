@@ -92,7 +92,7 @@ public class TestArrayAndListMethods : AssignmentBase
                 right = mid - 1;
             }
         }
-        return x;
+        return -1;
     }
 
     /// <summary>
@@ -103,7 +103,18 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int Fibonacci(int n)
     {
-        throw new NotImplementedException();
+        if (n == 0)
+        {
+            return 0;
+        }
+        else if (n == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return Fibonacci(n - 1) + Fibonacci(n - 2);
+        }
     }
 
     [Assignment(1)]
