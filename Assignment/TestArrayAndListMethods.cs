@@ -32,6 +32,10 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public Dictionary<int, string> LoopDict(Dictionary<int, string> element)
     {
+        foreach (var item in element)
+        {
+            Console.WriteLine($"{item.Key} {item.Value}");
+        }
         return element;
     }
 
