@@ -32,7 +32,7 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public Dictionary<int, string> LoopDict(Dictionary<int, string> element)
     {
-        throw new NotImplementedException();
+        return element;
     }
 
     public string ReverseString(string arr)
