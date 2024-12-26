@@ -21,7 +21,7 @@ public class TestArrayAndListMethods : AssignmentBase
 
     public List<string> LoopList(List<string> element)
     {
-        throw new NotImplementedException();
+        return element;
     }
 
     /// <summary>
