@@ -37,7 +37,9 @@ public class TestArrayAndListMethods : AssignmentBase
 
     public string ReverseString(string arr)
     {
-        return arr;
+        char[] reverse = arr.ToCharArray();
+        Array.Reverse(reverse);
+        return new string(reverse);
     }
 
     /*
