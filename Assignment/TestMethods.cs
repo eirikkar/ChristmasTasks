@@ -60,7 +60,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public List<double> ListDoubleMethod()
     {
-        throw new NotImplementedException();
+        return new List<double>();
     }
 
     /// <summary>
