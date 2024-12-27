@@ -82,7 +82,6 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotTrue(bool value)
     {
-        value = true;
         return value;
     }
 
@@ -94,7 +93,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotFalse(bool value)
     {
-        throw new NotImplementedException();
+        return value;
     }
 
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
