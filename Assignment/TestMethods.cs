@@ -38,7 +38,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int AddIntMethod(int a, int b)
     {
-        throw new NotImplementedException();
+        return a + b;
     }
 
     /// <summary>
