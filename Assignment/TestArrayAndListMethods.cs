@@ -68,7 +68,7 @@ public class TestArrayAndListMethods : AssignmentBase
     public int BinarySearch(int[] arr, int x)
     {
         // Array.Sort(arr);
-        if (x == -1 || arr == null)
+        if (arr == null)
         {
             throw new Exception();
         }
