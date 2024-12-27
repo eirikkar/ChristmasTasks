@@ -50,7 +50,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double MultiplyDoubleMethod(double a, double b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
 
     /// <summary>
