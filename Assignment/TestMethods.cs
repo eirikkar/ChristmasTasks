@@ -82,7 +82,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotTrue(bool value)
     {
-        throw new NotImplementedException();
+        return value;
     }
 
     /// <summary>
