@@ -81,7 +81,7 @@ public class TestArrayAndListMethods : AssignmentBase
 
             if (arr[mid] == x)
             {
-                return x;
+                return arr[mid];
             }
             else if (arr[mid] < x)
             {
