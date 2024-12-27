@@ -67,7 +67,7 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int BinarySearch(int[] arr, int x)
     {
-        // Array.Sort(arr);
+        Array.Sort(arr);
         if (arr == null)
         {
             throw new Exception();
@@ -109,7 +109,7 @@ public class TestArrayAndListMethods : AssignmentBase
         }
         else
         {
-            return (Fibonacci(n - 1) + Fibonacci(n - 2));
+            return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
     }
 
