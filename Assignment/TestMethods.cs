@@ -138,7 +138,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double Square(double a)
     {
-        throw new NotImplementedException();
+        return a * a;
     }
 
     /// <summary>
@@ -275,10 +275,11 @@ public class TestMethods : AssignmentBase
     [Assignment(11)]
     public void TestSquare()
     {
+        double[] inputs = { 2, 3, 4, 5, 8 };
         double[] expected = { 4, 9, 16, 25, 64 };
         for (int i = 2; i < expected.Length; i++)
         {
-            Assert.Equal(expected[i], Square(i));
+            Assert.Equal(expected[i], Square(inputs[i]));
         }
     }
 
