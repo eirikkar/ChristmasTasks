@@ -279,11 +279,9 @@ public class TestMethods : AssignmentBase
     [Assignment(11)]
     public void TestSquare()
     {
-        double[] inputs = { 2, 3, 4, 5, 8 };
-        double[] expected = { 4, 9, 16, 25, 64 };
-        for (int i = 2; i < expected.Length; i++)
+        for (int i = 2; i < 100; i++)
         {
-            Assert.Equal(expected[i], Square(inputs[i]));
+            Assert.Equal(Double.Pow(i, 2), Square(i));
         }
     }
 
