@@ -98,7 +98,8 @@ public class TestMethods : AssignmentBase
 
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
     {
-        throw new NotImplementedException();
+        var list = new List<Generics>();
+        return list;
     }
 
     /// <summary>
