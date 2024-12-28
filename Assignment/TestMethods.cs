@@ -110,7 +110,14 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool CanEnter(int age)
     {
-        throw new NotImplementedException();
+        if (age >= 18)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /// <summary>
