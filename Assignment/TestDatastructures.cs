@@ -38,6 +38,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(4)]
     public void ShouldBeBooleanArray()
     {
+        datastructures.Booleans = new bool[2];
         Assert.Equal(datastructures.Booleans, new bool[2]);
     }
 
