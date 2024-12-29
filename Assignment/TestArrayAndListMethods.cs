@@ -255,7 +255,7 @@ public class TestArrayAndListMethods : AssignmentBase
     public void TestObjectEquality()
     {
         Person person1 = new Person { Name = "John Doe", Age = 30 };
-        Person person2 = new Person { Name = "Jane Doe", Age = 30 };
+        Person person2 = new Person { Name = "John Doe", Age = 30 }; //Er det dette jeg skal?
         Assert.Equal(person1, person2);
     }
 
