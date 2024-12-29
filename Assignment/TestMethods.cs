@@ -98,8 +98,7 @@ public class TestMethods : AssignmentBase
 
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
     {
-        var list = new List<Generics>();
-        return list;
+        return new List<Generics>();
     }
 
     /// <summary>
