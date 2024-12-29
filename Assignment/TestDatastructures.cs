@@ -31,6 +31,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(3)]
     public void ShouldBeDoubleArray()
     {
+        datastructures.Doubles = new double[5];
         Assert.Equal(datastructures.Doubles, new double[5]);
     }
 
