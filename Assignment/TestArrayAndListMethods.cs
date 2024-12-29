@@ -113,6 +113,11 @@ public class TestArrayAndListMethods : AssignmentBase
         }
     }
 
+    public int IntSum2(int a, int b)
+    {
+        return checked(a + b);
+    }
+
     [Assignment(1)]
     public void ShouldReturnStringArray()
     {
@@ -242,8 +247,8 @@ public class TestArrayAndListMethods : AssignmentBase
     [Assignment(7)]
     public void TestPrimitiveTypeHandling()
     {
-        Assert.Throws<OverflowException>(() => IntSum(int.MaxValue, 1));
-        Assert.Throws<OverflowException>(() => IntSum(int.MinValue, -1));
+        Assert.Throws<OverflowException>(() => IntSum2(int.MaxValue, 1));
+        Assert.Throws<OverflowException>(() => IntSum2(int.MinValue, -1));
     }
 
     [Assignment(8)]
