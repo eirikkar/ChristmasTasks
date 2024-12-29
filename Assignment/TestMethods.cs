@@ -165,7 +165,16 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string CreateNewFile(string path)
     {
-        throw new NotImplementedException();
+        try
+        {
+            File.Create(path);
+            return path;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error:", e.Message);
+            throw;
+        }
     }
 
     /// <summary>
