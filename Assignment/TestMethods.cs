@@ -186,7 +186,16 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string AppendTextContent(string path, string content)
     {
-        throw new NotImplementedException();
+        try
+        {
+            File.AppendAllText(path, content);
+            return path;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error:", e.Message);
+            throw;
+        }
     }
 
     /*
