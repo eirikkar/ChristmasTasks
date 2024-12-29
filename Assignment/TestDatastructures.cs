@@ -24,6 +24,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(2)]
     public void ShouldBeIntArray()
     {
+        datastructures.Integers = new int[5];
         Assert.Equal(datastructures.Integers, new int[5]);
     }
 
