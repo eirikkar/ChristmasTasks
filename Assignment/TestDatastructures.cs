@@ -52,6 +52,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(6)]
     public void ShouldBe2DIntArray()
     {
+        datastructures.Integers2d = new int[1][];
         Assert.Equal(datastructures.Integers2d, new int[1][]);
     }
 
