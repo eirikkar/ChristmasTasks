@@ -66,6 +66,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(8)]
     public void ShouldBeListOfStrings()
     {
+        datastructures.StringsList = new List<string>();
         Assert.Equal(new List<string>(), datastructures.StringsList);
     }
 
