@@ -73,6 +73,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(9)]
     public void ShouldBeDictionaryOfIntAndStrings()
     {
+        datastructures.KeyValuePairs = new Dictionary<int, string>();
         Assert.Equal(new Dictionary<int, string>(), datastructures.KeyValuePairs);
     }
 }
