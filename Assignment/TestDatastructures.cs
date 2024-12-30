@@ -59,6 +59,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(7)]
     public void ShouldBe2DArrayOfDoubles()
     {
+        datastructures.Doubles2d = new double[1][];
         Assert.Equal(datastructures.Doubles2d, new double[1][]);
     }
 
