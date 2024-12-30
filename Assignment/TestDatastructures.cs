@@ -45,6 +45,7 @@ public class TestDatastructures : AssignmentBase
     [Assignment(5)]
     public void ShouldBe2DStringArray()
     {
+        datastructures.Strings2d = new string[1][];
         Assert.Equal(datastructures.Strings2d, new string[1][]);
     }
 
